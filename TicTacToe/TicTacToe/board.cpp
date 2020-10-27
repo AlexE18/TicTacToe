@@ -144,8 +144,22 @@ bool checkHumanWin(board gameBoard) {
 // Main Function
 int main() {
 	board gameBoard;
+	int firstOrSecond;
+	while (true) {
+		std::cout << "1: Play First\n2: Play Second\n";
+		std::cin >> firstOrSecond;
+		if (firstOrSecond == 1 || firstOrSecond == 2) {
+			break;
+		}
+		std::cout << "Type 1 or 2\n";
+	}
 
 	while (!gameBoard.complete) {
+		if (firstOrSecond == 2) {
+			opponentMove(gameBoard, 0, true);
+			gameBoard.moves++;
+			firstOrSecond = 0;
+		}
 		drawBoard(gameBoard);
 		userMove(gameBoard); //Passes by reference (be careful)
 		gameBoard.moves++;

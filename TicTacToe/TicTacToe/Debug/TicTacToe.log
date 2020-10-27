@@ -1,4 +1,5 @@
 ﻿  board.cpp
   opponent.cpp
+C:\Users\aceth\source\repos\TicTacToe\TicTacToe\opponent.cpp(18,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
   TicTacToe.vcxproj -> C:\Users\aceth\source\repos\TicTacToe\Debug\TicTacToe.exe
